@@ -101,3 +101,9 @@ source ~/.bashrc
 
 aws cloud9 update-environment  --environment-id $C9_PID --managed-credentials-action DISABLE || echo "Check Managed Credentials, something went wrong"
 rm -vf ${HOME}/.aws/credentials
+
+
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+terraform -v
